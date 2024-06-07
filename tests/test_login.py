@@ -1,3 +1,8 @@
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from data import TestData
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
@@ -10,8 +15,8 @@ class TestLogin:
         WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, Locator.ENTER_ACCOUNT)))
         driver.find_element(By.XPATH, Locator.ENTER_ACCOUNT).click()
         WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, Locator.LOGIN_BUTTON)))
-        driver.find_element(By.XPATH, Locator.EMAIL_INPUT).send_keys("test_user_5_001@yandex.ru")
-        driver.find_element(By.XPATH, Locator.PASS_INPUT).send_keys("password123")
+        driver.find_element(By.XPATH, Locator.EMAIL_INPUT).send_keys(TestData.USER_EMAIL)
+        driver.find_element(By.XPATH, Locator.PASS_INPUT).send_keys(TestData.USER_PASSWORD)
         driver.find_element(By.XPATH, Locator.LOGIN_BUTTON).click()
         WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, Locator.CREATE_ORDER_BUTTON)))
         assert driver.find_element(By.XPATH, Locator.CREATE_ORDER_BUTTON).is_displayed()
@@ -21,8 +26,8 @@ class TestLogin:
         WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, Locator.ACCOUNT_BUTTON)))
         driver.find_element(By.XPATH, Locator.ACCOUNT_BUTTON).click()
         WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, Locator.LOGIN_BUTTON)))
-        driver.find_element(By.XPATH, Locator.EMAIL_INPUT).send_keys("test_user_5_001@yandex.ru")
-        driver.find_element(By.XPATH, Locator.PASS_INPUT).send_keys("password123")
+        driver.find_element(By.XPATH, Locator.EMAIL_INPUT).send_keys(TestData.USER_EMAIL)
+        driver.find_element(By.XPATH, Locator.PASS_INPUT).send_keys(TestData.USER_PASSWORD)
         driver.find_element(By.XPATH, Locator.LOGIN_BUTTON).click()
         WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, Locator.CREATE_ORDER_BUTTON)))
         assert driver.find_element(By.XPATH, Locator.CREATE_ORDER_BUTTON).is_displayed()
@@ -36,8 +41,8 @@ class TestLogin:
         WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, Locator.ENTER_ACCOUNT_BUTTON)))
         driver.find_element(By.XPATH, Locator.ENTER_ACCOUNT_BUTTON).click()
         WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, Locator.LOGIN_BUTTON)))
-        driver.find_element(By.XPATH, Locator.EMAIL_INPUT).send_keys("test_user_5_001@yandex.ru")
-        driver.find_element(By.XPATH, Locator.PASS_INPUT).send_keys("password123")
+        driver.find_element(By.XPATH, Locator.EMAIL_INPUT).send_keys(TestData.USER_EMAIL)
+        driver.find_element(By.XPATH, Locator.PASS_INPUT).send_keys(TestData.USER_PASSWORD)
         driver.find_element(By.XPATH, Locator.LOGIN_BUTTON).click()
         WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, Locator.CREATE_ORDER_BUTTON)))
         assert driver.find_element(By.XPATH, Locator.CREATE_ORDER_BUTTON).is_displayed()
@@ -51,8 +56,8 @@ class TestLogin:
         WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, Locator.ENTER_ACCOUNT_BUTTON)))
         driver.find_element(By.XPATH, Locator.ENTER_ACCOUNT_BUTTON).click()
         WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, Locator.LOGIN_BUTTON)))
-        driver.find_element(By.XPATH, Locator.EMAIL_INPUT).send_keys("test_user_5_001@yandex.ru")
-        driver.find_element(By.XPATH, Locator.PASS_INPUT).send_keys("password123")
+        driver.find_element(By.XPATH, Locator.EMAIL_INPUT).send_keys(TestData.USER_EMAIL)
+        driver.find_element(By.XPATH, Locator.PASS_INPUT).send_keys(TestData.USER_PASSWORD)
         driver.find_element(By.XPATH, Locator.LOGIN_BUTTON).click()
         WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, Locator.CREATE_ORDER_BUTTON)))
         assert driver.find_element(By.XPATH, Locator.CREATE_ORDER_BUTTON).is_displayed()

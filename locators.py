@@ -7,7 +7,7 @@ class Locator:
     REGISTRATION_COMMIT_BUTTON = "//button[contains(text(), 'Зарегистрироваться')]"
     LOGIN_BUTTON = "//button[contains(text(), 'Войти')]"
     CREATE_ORDER_BUTTON = "//button[contains(text(), 'Оформить заказ')]"
-    ERROR_LABEL = "p.input__error"
+    ERROR_LABEL = ".input__error"  # Более общий селектор
     ENTER_ACCOUNT = "//button[contains(text(), 'Войти в аккаунт')]"
     ENTER_ACCOUNT_BUTTON = "//a[contains(@href, '/login')]"
     FORGOT_PASSWORD_BUTTON = "//a[contains(@href, '/forgot-password')]"
